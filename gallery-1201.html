@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Unit A-1201 – Photos</title><meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#22262F;--ink2:#4A505C;--mute:#7C828D;--sand:#F5F2EC;--paper:#fff;--line:#E2DDD2;--teal:#68A5A0;--gold:#B08D57;--r:14px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--sand);color:var(--ink);font:400 16px/1.55 Jost,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+/* header */
+.top{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.top .wrap{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:end;padding-top:0;padding-bottom:56px}
+.tab{background:#161A22;padding:26px 30px 24px;border-radius:0 0 14px 14px;align-self:start}
+.tab img{width:150px;height:auto}
+.top h1{font:500 clamp(34px,5.2vw,60px)/1.05 "Cormorant Garamond",serif;margin:60px 0 12px;letter-spacing:.2px}
+.top p{margin:0;color:#C9CED6;font-weight:300;max-width:60ch}
+.top .meta{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#9AA3AF}
+.top .meta span{border:1px solid #3a404c;padding:5px 12px;border-radius:99px}
+.top::after{content:"";position:absolute;right:-80px;top:-80px;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(104,165,160,.35),transparent 70%)}
+/* sections */
+section{padding:56px 0 0}
+h2{font:500 clamp(28px,3.4vw,40px)/1.1 "Cormorant Garamond",serif;margin:0 0 6px}
+.sub{color:var(--ink2);margin:0 0 24px;max-width:70ch}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:-30px;position:relative;z-index:2}
+.stat{background:var(--paper);border-radius:var(--r);padding:18px 20px;box-shadow:0 6px 24px rgba(34,38,47,.08)}
+.stat b{display:block;font:500 28px/1.1 "Cormorant Garamond",serif}.stat span{font-size:13px;color:var(--mute);text-transform:uppercase;letter-spacing:.07em}
+/* table */
+.tablewrap{background:var(--paper);border-radius:var(--r);box-shadow:0 6px 24px rgba(34,38,47,.06);overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:1000px;font-size:15px}
+thead th{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--mute);font-weight:500;text-align:left;padding:14px 14px;border-bottom:1px solid var(--line);white-space:nowrap;cursor:pointer;user-select:none}
+thead th:hover{color:var(--ink)}thead th[aria-sort]::after{content:" ▴";color:var(--teal)}thead th[aria-sort=descending]::after{content:" ▾"}
+tbody td,tbody th{padding:14px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}
+tbody td{white-space:nowrap}tbody td:nth-child(5){white-space:normal;min-width:150px}
+tbody tr:last-child td,tbody tr:last-child th{border-bottom:0}
+tbody th{font-weight:600;white-space:nowrap}tbody th a{text-decoration:none}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--accent);margin-right:9px}
+small{color:var(--mute);font-size:12.5px}.mute{color:var(--mute)}
+.links a{color:var(--ink);text-decoration-color:var(--teal);text-underline-offset:3px;font-weight:500}
+tbody tr:hover{background:#FBFAF7}
+/* insights */
+.insights{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:22px}
+.ins{background:var(--paper);border-radius:var(--r);padding:18px 20px;border-top:3px solid var(--c,var(--teal))}
+.ins h4{margin:0 0 6px;font:500 13px/1.3 Jost;text-transform:uppercase;letter-spacing:.08em;color:var(--mute)}
+.ins p{margin:0;font-size:15px}.ins a{font-weight:500;text-underline-offset:3px}
+/* units */
+.unit{display:grid;grid-template-columns:1.25fr 1fr;background:var(--paper);border-radius:var(--r);overflow:hidden;box-shadow:0 6px 24px rgba(34,38,47,.06);margin-bottom:22px;border-top:4px solid var(--accent);scroll-margin-top:16px}
+.shot{position:relative;display:block;min-height:280px;background:#ddd}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:12% 50%;position:absolute;inset:0;transition:transform .6s}
+.shot:hover img{transform:scale(1.03)}
+.shot-cta{position:absolute;left:16px;bottom:16px;background:rgba(34,38,47,.88);color:#fff;padding:8px 14px;border-radius:99px;font-size:13px;font-weight:500;letter-spacing:.03em}
+.info{padding:26px 28px}
+.head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap}
+.unit h3{font:500 34px/1 "Cormorant Garamond",serif;margin:0}
+.tags{display:flex;gap:6px;flex-wrap:wrap}.tag{font-size:11px;text-transform:uppercase;letter-spacing:.07em;font-weight:500;padding:4px 10px;border-radius:99px;background:color-mix(in srgb,var(--accent) 14%,#fff);color:var(--ink)}
+.note{color:var(--ink2);margin:10px 0 18px;font-size:15px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px 16px;margin:0 0 20px}
+.facts dt{font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--mute)}.facts dd{margin:0;font-weight:500;font-size:15px;line-height:1.35}
+.price{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px}
+.price>div{background:var(--sand);border-radius:10px;padding:12px 14px}
+.price span{display:block;font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--mute)}
+.price b{font:500 24px/1.2 "Cormorant Garamond",serif}.price .strike{color:var(--mute);text-decoration:line-through;text-decoration-thickness:1px}
+.price .neg{background:var(--ink);color:#fff}.price .neg span{color:#B8BFCA}
+.actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 20px;border-radius:99px;background:var(--ink);color:#fff;text-decoration:none;font-weight:500;font-size:14.5px;border:1px solid var(--ink);transition:background .2s}
+.btn:hover{background:var(--accent)}.btn.ghost{background:transparent;color:var(--ink)}.btn.ghost:hover{background:var(--ink);color:#fff}
+a:focus-visible,th:focus-visible,button:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
+.gal a{position:relative;aspect-ratio:4/3;overflow:hidden;border-radius:10px;background:#ddd}.gal img{width:100%;height:100%;object-fit:cover;transition:transform .4s}.gal a:hover img{transform:scale(1.05)}
+/* lightbox */
+#lb{position:fixed;inset:0;background:rgba(18,20,26,.94);display:none;align-items:center;justify-content:center;z-index:50;padding:24px}
+#lb.on{display:flex}#lb img{max-height:86vh;max-width:94vw;object-fit:contain;border-radius:6px;background:#fff}
+#lb .cap{position:absolute;bottom:14px;left:0;right:0;text-align:center;color:#C9CED6;font-size:14px}
+#lb button{position:absolute;background:none;border:0;color:#fff;font-size:34px;cursor:pointer;padding:12px 18px}
+#lb .x{top:6px;right:8px}#lb .p{left:4px;top:50%}#lb .n{right:4px;top:50%}
+footer{padding:48px 0 64px;color:var(--mute);font-size:13.5px}footer p{margin:0 0 6px;max-width:90ch}
+@media(max-width:860px){.unit{grid-template-columns:1fr}.shot{min-height:0;aspect-ratio:2.2/1}.stats{grid-template-columns:repeat(2,1fr)}.top .wrap{grid-template-columns:1fr;gap:0}.tab{justify-self:start}.top h1{margin-top:34px}}
+@media(max-width:520px){.facts{grid-template-columns:repeat(2,1fr)}.info{padding:20px}.tab img{width:120px}}
+@media print{.top{background:#fff;color:#000}.tab{background:#22262F}.shot-cta,.btn,#lb{display:none}.unit{break-inside:avoid;box-shadow:none;border:1px solid #ccc}body{background:#fff}.top::after{display:none}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+
+.top .wrap{padding-bottom:40px}.top h1{margin-top:40px}
+.gal .cap{position:absolute;left:8px;bottom:8px;background:rgba(34,38,47,.82);color:#fff;font-size:11.5px;padding:3px 9px;border-radius:99px;letter-spacing:.02em}
+.vids{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-bottom:8px}
+.vids figure{margin:0;background:#000;border-radius:var(--r);overflow:hidden}.vids video{width:100%;display:block;max-height:70vh}.vids figcaption{color:#C9CED6;font-size:13px;padding:8px 14px;background:var(--ink)}
+.back{display:inline-block;margin-top:18px;color:#fff;text-decoration:none;border:1px solid #3a404c;padding:8px 16px;border-radius:99px;font-size:14px}.back:hover{background:#fff;color:var(--ink)}
+</style></head><body>
+<header class="top"><div class="wrap"><div class="tab"><img src="assets/logo.png" alt="Atlantis The Royal, Dubai"></div>
+<div><h1>Unit A-1201 · Photos</h1><p>Floor 12 · Dual View: Palm and Sea (converted to 3 BR) · 274.0 sqm / 2,949 sqft · Offer price AED 28 M</p><a class="back" href="index.html#unit-1201">← Back to catalog</a></div></div></header>
+<main class="wrap">
+
+<section><h2>Photos</h2><p class="sub">Select any image to enlarge.</p><div class="gal"><a href="assets/1201-01.jpg" data-lb="Unit A-1201 · 1" data-g="1201"><img loading="lazy" src="assets/1201-01-t.jpg" alt="Unit A-1201 · 1"></a><a href="assets/1201-02.jpg" data-lb="Unit A-1201 · Palm view" data-g="1201"><img loading="lazy" src="assets/1201-02-t.jpg" alt="Unit A-1201 · Palm view"><span class="cap">Palm view</span></a><a href="assets/1201-03.jpg" data-lb="Unit A-1201 · Living room" data-g="1201"><img loading="lazy" src="assets/1201-03-t.jpg" alt="Unit A-1201 · Living room"><span class="cap">Living room</span></a><a href="assets/1201-04.jpg" data-lb="Unit A-1201 · Living room" data-g="1201"><img loading="lazy" src="assets/1201-04-t.jpg" alt="Unit A-1201 · Living room"><span class="cap">Living room</span></a><a href="assets/1201-05.jpg" data-lb="Unit A-1201 · Living room" data-g="1201"><img loading="lazy" src="assets/1201-05-t.jpg" alt="Unit A-1201 · Living room"><span class="cap">Living room</span></a><a href="assets/1201-06.jpg" data-lb="Unit A-1201 · Living room" data-g="1201"><img loading="lazy" src="assets/1201-06-t.jpg" alt="Unit A-1201 · Living room"><span class="cap">Living room</span></a><a href="assets/1201-07.jpg" data-lb="Unit A-1201 · Balcony" data-g="1201"><img loading="lazy" src="assets/1201-07-t.jpg" alt="Unit A-1201 · Balcony"><span class="cap">Balcony</span></a><a href="assets/1201-08.jpg" data-lb="Unit A-1201 · Fountains view" data-g="1201"><img loading="lazy" src="assets/1201-08-t.jpg" alt="Unit A-1201 · Fountains view"><span class="cap">Fountains view</span></a><a href="assets/1201-09.jpg" data-lb="Unit A-1201 · Fountains view" data-g="1201"><img loading="lazy" src="assets/1201-09-t.jpg" alt="Unit A-1201 · Fountains view"><span class="cap">Fountains view</span></a><a href="assets/1201-10.jpg" data-lb="Unit A-1201 · Beach club" data-g="1201"><img loading="lazy" src="assets/1201-10-t.jpg" alt="Unit A-1201 · Beach club"><span class="cap">Beach club</span></a><a href="assets/1201-11.jpg" data-lb="Unit A-1201 · Kitchen" data-g="1201"><img loading="lazy" src="assets/1201-11-t.jpg" alt="Unit A-1201 · Kitchen"><span class="cap">Kitchen</span></a><a href="assets/1201-12.jpg" data-lb="Unit A-1201 · Kitchen" data-g="1201"><img loading="lazy" src="assets/1201-12-t.jpg" alt="Unit A-1201 · Kitchen"><span class="cap">Kitchen</span></a><a href="assets/1201-13.jpg" data-lb="Unit A-1201 · Kitchen" data-g="1201"><img loading="lazy" src="assets/1201-13-t.jpg" alt="Unit A-1201 · Kitchen"><span class="cap">Kitchen</span></a><a href="assets/1201-14.jpg" data-lb="Unit A-1201 · 14" data-g="1201"><img loading="lazy" src="assets/1201-14-t.jpg" alt="Unit A-1201 · 14"></a><a href="assets/1201-15.jpg" data-lb="Unit A-1201 · 15" data-g="1201"><img loading="lazy" src="assets/1201-15-t.jpg" alt="Unit A-1201 · 15"></a><a href="assets/1201-16.jpg" data-lb="Unit A-1201 · 16" data-g="1201"><img loading="lazy" src="assets/1201-16-t.jpg" alt="Unit A-1201 · 16"></a><a href="assets/1201-17.jpg" data-lb="Unit A-1201 · Balcony" data-g="1201"><img loading="lazy" src="assets/1201-17-t.jpg" alt="Unit A-1201 · Balcony"><span class="cap">Balcony</span></a><a href="assets/1201-18.jpg" data-lb="Unit A-1201 · Balcony" data-g="1201"><img loading="lazy" src="assets/1201-18-t.jpg" alt="Unit A-1201 · Balcony"><span class="cap">Balcony</span></a><a href="assets/1201-19.jpg" data-lb="Unit A-1201 · Master bedroom" data-g="1201"><img loading="lazy" src="assets/1201-19-t.jpg" alt="Unit A-1201 · Master bedroom"><span class="cap">Master bedroom</span></a><a href="assets/1201-20.jpg" data-lb="Unit A-1201 · Sea view" data-g="1201"><img loading="lazy" src="assets/1201-20-t.jpg" alt="Unit A-1201 · Sea view"><span class="cap">Sea view</span></a><a href="assets/1201-21.jpg" data-lb="Unit A-1201 · Master bedroom" data-g="1201"><img loading="lazy" src="assets/1201-21-t.jpg" alt="Unit A-1201 · Master bedroom"><span class="cap">Master bedroom</span></a><a href="assets/1201-22.jpg" data-lb="Unit A-1201 · Master bedroom" data-g="1201"><img loading="lazy" src="assets/1201-22-t.jpg" alt="Unit A-1201 · Master bedroom"><span class="cap">Master bedroom</span></a><a href="assets/1201-23.jpg" data-lb="Unit A-1201 · Master bathroom" data-g="1201"><img loading="lazy" src="assets/1201-23-t.jpg" alt="Unit A-1201 · Master bathroom"><span class="cap">Master bathroom</span></a><a href="assets/1201-24.jpg" data-lb="Unit A-1201 · Second bedroom" data-g="1201"><img loading="lazy" src="assets/1201-24-t.jpg" alt="Unit A-1201 · Second bedroom"><span class="cap">Second bedroom</span></a><a href="assets/1201-25.jpg" data-lb="Unit A-1201 · Second bedroom" data-g="1201"><img loading="lazy" src="assets/1201-25-t.jpg" alt="Unit A-1201 · Second bedroom"><span class="cap">Second bedroom</span></a><a href="assets/1201-26.jpg" data-lb="Unit A-1201 · Second bedroom" data-g="1201"><img loading="lazy" src="assets/1201-26-t.jpg" alt="Unit A-1201 · Second bedroom"><span class="cap">Second bedroom</span></a><a href="assets/1201-27.jpg" data-lb="Unit A-1201 · Bathroom" data-g="1201"><img loading="lazy" src="assets/1201-27-t.jpg" alt="Unit A-1201 · Bathroom"><span class="cap">Bathroom</span></a><a href="assets/1201-28.jpg" data-lb="Unit A-1201 · Wardrobe" data-g="1201"><img loading="lazy" src="assets/1201-28-t.jpg" alt="Unit A-1201 · Wardrobe"><span class="cap">Wardrobe</span></a><a href="assets/1201-29.jpg" data-lb="Unit A-1201 · Laundry" data-g="1201"><img loading="lazy" src="assets/1201-29-t.jpg" alt="Unit A-1201 · Laundry"><span class="cap">Laundry</span></a><a href="assets/1201-30.jpg" data-lb="Unit A-1201 · 30" data-g="1201"><img loading="lazy" src="assets/1201-30-t.jpg" alt="Unit A-1201 · 30"></a><a href="assets/1201-31.jpg" data-lb="Unit A-1201 · 31" data-g="1201"><img loading="lazy" src="assets/1201-31-t.jpg" alt="Unit A-1201 · 31"></a><a href="assets/1201-32.jpg" data-lb="Unit A-1201 · 32" data-g="1201"><img loading="lazy" src="assets/1201-32-t.jpg" alt="Unit A-1201 · 32"></a><a href="assets/1201-33.jpg" data-lb="Unit A-1201 · 33" data-g="1201"><img loading="lazy" src="assets/1201-33-t.jpg" alt="Unit A-1201 · 33"></a></div></section>
+</main><footer><div class="wrap"><p>Images from the unit's listing. For internal use only.</p></div></footer>
+<div id="lb" role="dialog" aria-modal="true" aria-label="Image viewer"><button class="x" aria-label="Close">×</button><button class="p" aria-label="Previous">‹</button><img alt=""><button class="n" aria-label="Next">›</button><div class="cap"></div></div>
+<script>(function(){
+ var lb=document.getElementById('lb'),im=lb.querySelector('img'),cap=lb.querySelector('.cap'),set=[],k=0;
+ function show(){var a=set[k];im.src=a.href;im.alt=a.dataset.lb;cap.textContent=a.dataset.lb;lb.classList.add('on');
+  lb.querySelector('.p').style.display=lb.querySelector('.n').style.display=set.length>1?'':'none'}
+ document.addEventListener('click',function(e){var a=e.target.closest('[data-lb]');if(!a)return;e.preventDefault();
+  set=a.dataset.g?[].slice.call(document.querySelectorAll('[data-g="'+a.dataset.g+'"]')):[a];k=Math.max(0,set.indexOf(a));show()});
+ function close(){lb.classList.remove('on');im.src=''}
+ lb.addEventListener('click',function(e){if(e.target===lb||e.target.classList.contains('x'))close();
+  else if(e.target.classList.contains('n')){k=(k+1)%set.length;show()}else if(e.target.classList.contains('p')){k=(k-1+set.length)%set.length;show()}});
+ document.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;
+  if(e.key==='Escape')close();if(e.key==='ArrowRight'&&set.length>1){k=(k+1)%set.length;show()}if(e.key==='ArrowLeft'&&set.length>1){k=(k-1+set.length)%set.length;show()}});
+})();</script></body></html>
